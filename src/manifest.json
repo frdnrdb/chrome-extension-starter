@@ -1,0 +1,36 @@
+{
+	"manifest_version": 2,
+	"homepage_url": "https://www.fvn.no",
+	"icons": {
+		"64": "icon.png"
+	},
+	"background": {
+		"scripts": [
+			"background.bundle.js"
+		],
+		"persistent": true
+	},
+	"browser_action": {
+		"default_icon": "icon-disabled.png",
+		"default_popup": "popup.html"
+	},
+	"chrome_url_overrides": {
+    "newtab": "popup.html"
+  },
+	"content_scripts": [{
+		"matches": [
+			"https://www.google.com/*"
+		],
+		"js": [
+			"content.bundle.js"
+		]
+	}],
+	"permissions": [
+		"https://www.google.com/*",
+		"storage",
+		"tabs"
+	],
+	"web_accessible_resources": [
+		"icon.png"
+	]
+}
