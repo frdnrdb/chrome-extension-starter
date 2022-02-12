@@ -1,6 +1,5 @@
 {
 	"manifest_version": 2,
-	"homepage_url": "https://www.fvn.no",
 	"icons": {
 		"64": "icon.png"
 	},
@@ -14,9 +13,6 @@
 		"default_icon": "icon-disabled.png",
 		"default_popup": "popup.html"
 	},
-	"chrome_url_overrides": {
-    "newtab": "popup.html"
-  },
 	"content_scripts": [{
 		"matches": [
 			"https://www.google.com/*"
